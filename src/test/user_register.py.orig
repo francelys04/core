@@ -1,0 +1,13 @@
+'''
+Created on 20/06/2014
+
+@author: heybees
+'''
+import json
+import requests
+
+payload = {'login':'h.francelys@gmail.com', 'password':'20349918',
+           'email':'h.francelys@gmail.com','full_name':'Francelys Heredia',
+           'gender':'Femenino', 'type':'Backend', 'app':'Backend'}
+r = requests.post("http://localhost:5000/user/register", data = json.dumps(payload))
+print r.json()
